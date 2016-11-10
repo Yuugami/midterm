@@ -1,0 +1,343 @@
+/**************************************************
+Rubric Checklist
+---------
+[X] Created Your Own Body Content for the Paragraphs as Required
+[X] Two images are used and an image generator site is 
+used to create both images.
+[X] Both images are the same theme
+[X] All three headings text match the theme you picked for your images.
+[X] Website contains four versions of the layout built with media 
+queries based on different screen widths.
+[X] Four distinct and appropriate layout sizes are used
+[X] All four layouts use the required widths.
+[X] A good Google font pair, one Serif font for headings and one 
+Sans-serif font for the body text and navigation links is used
+[X] A single link is used to download both Google Fonts
+[X] Full font stacks with at least three fonts (Google font first) are 
+used for both the Serif and Sans-serif fonts.
+[X] Text is resized in all headings, links, and body content to appropriately fit the space provided by each layout
+[] There are no CSS or HTML validation errors
+[] A Github repo that contains the HTML and CSS (inside a 
+folder called 'styles' or 'css') and uses the gh-pages branch 
+is created for your project. The link to the github.io version 
+of your repo is submitted through Canvas
+
+
+Used Fonts
+----------
+Raleway
+Trebuchet MS
+Taviraj
+Goergia
+
+Font Scaling
+------------
+6.854rem
+4.236rem
+2.618rem
+1.618rem
+1.0rem
+0.618rem
+
+**************************************************/
+
+
+/************************************************ 
+                    IMPORTS 
+************************************************/
+
+@import 'https://fonts.googleapis.com/css?family=Raleway|Taviraj';
+
+/************************************************ 
+                    DEFAULT 
+************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Raleway', 'Trebuchet MS', sans-serif;
+}
+
+
+/************************************************ 
+            DEFAULTS - MOBILE FIRST 
+************************************************/
+
+h1 {
+    font: bold 4.236rem 'Taviraj', 'Georgia', serif;
+}
+
+h2 {
+    font: bold 2.618rem 'Taviraj', 'Georgia', serif;
+}
+
+li,
+p,
+a {
+    font: bold 1.618rem 'Raleway', 'Trebuchet MS', sans-serif;
+}
+
+pre,
+code,
+kbd {
+    font: normal 1.0rem 'Raleway', 'Trebuchet MS', sans-serif,
+}
+
+p {
+    padding: 1rem 0;
+}
+
+
+/************************************************
+            LAYOUT - MOBILE FIRST
+************************************************/
+
+.wrapper {
+    margin: 0 auto;
+    width: 95%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background: linear-gradient(315deg, #c3c4c3 49%, #fff);
+}
+
+header {
+    width: 100%;
+    background-image: url("../img/catTwo350x65.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, -2px 0 0 #000, 0 -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 0 0 #000, 0 2px 0 #000;
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+}
+
+nav>ul {
+    width: 100%;
+}
+
+nav li {
+    width: 100%;
+    list-style: none;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+    display: block;
+    text-align: center;
+    transition: background 0.5s ease-in;
+}
+
+nav a:active,
+nav a:focus,
+nav a:hover {
+    background-color: #C3C4C3;
+    cursor: pointer;
+    transition: background 0.5s ease-in;
+}
+
+main {
+    width: 100%;
+}
+
+.col {
+    float: none;
+    width: 100%;
+}
+
+.col img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    background-color: azure;
+}
+
+footer {
+    width: 100%;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+footer li {
+    list-style: none;
+}
+
+
+/************************************************
+               Media Queries
+************************************************/
+
+/* Medium Screens */
+@media screen and (min-width: 45em) {
+    h1 {
+        font-size: 3.986rem;
+    }
+    
+    h2 {
+        font-size: 2.368rem;
+    }
+    
+    li,
+    p,
+    a {
+        font-size: 1.368rem; 
+    }
+    
+    h2,
+    h3,
+    p {
+        line-height: 1.5em;
+    }
+    .wrapper {
+        width: 100%;
+    }
+    nav {
+        margin: 0 auto;
+        width: 90%;
+    }
+    nav li {
+        float: left;
+        padding: 0.2em;
+        width: 20%;
+        border-bottom: 1px solid #000;
+        list-style: none;
+    }
+    nav li:first-child {
+        border-left: 1px solid #000;
+    }
+    nav li:last-child {
+        border-right: 1px solid #000;
+    }
+    main {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .col {
+        float: left;
+        padding: 0 1em;
+        width: 50%;
+    }
+    .col img {
+        float: left;
+        margin: 0 0.32em;
+        width: 60%;
+    }
+    footer {
+        clear: both;
+        margin: 0 auto;
+        width: 90%;
+    }
+    footer li {
+        list-style: none;
+    }
+}
+
+/* Large Screens */
+@media screen and (min-width: 65em) {
+    h1 {
+        font-size: 3.736rem;
+    }
+    
+    h2 {
+        font-size: 2.118rem;
+    }
+    
+    li,
+    p {
+        font-size: 1.118rem; 
+    }
+    
+    a {
+        font-size: 1.7rem;
+    }
+    
+    nav li {
+        width: 20%;
+        border: 0;
+        list-style: none;
+    }
+    nav li:first-child {
+        border-left: 0;
+    }
+    nav li:last-child {
+        border-right: 0;
+    }
+    .col {
+        float: left;
+        padding: 2em 1em;
+        width: 50%;
+    }
+    .col img {
+        width: 50%;
+    }
+    footer {
+        clear: both;
+        width: 100%;
+    }
+}
+
+/* Massive Screens */
+@media screen and (min-width: 90em) {
+    h1 {
+        font-size: 3.606rem;
+    }
+    
+    h2 {
+        font-size: 1.988rem;
+    }
+    
+    li,
+    p {
+        font-size: 0.988rem; 
+    }
+    
+    h2,
+    h3,
+    p {
+        line-height: 1.6em;
+    }
+    
+    nav {
+        float: left;
+        width: 30%;
+    }
+    nav li {
+        padding: 1.5em 0;
+        width: 100%;
+        transition: background-color 0.5s ease-out;
+    }
+    nav li:first-child {
+        margin-top: 5em;
+    }
+    nav li:hover {
+        transition: background-color 0.5s ease-out;
+        background-color: #C3C4C3;
+    }
+    nav li a {
+        font-size: 3em;
+        text-decoration: none;
+    }
+    main {
+        float: right;
+        width: 70%;
+    }
+    .col img {
+        width: 55%;
+    }
+    footer ul {
+        padding-bottom: 1em;
+    }
+    footer ul li {
+        display: inline-block;
+        width: 33%;
+    }
+}
