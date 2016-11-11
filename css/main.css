@@ -83,12 +83,6 @@ a {
     font: bold 1.618rem 'Raleway', 'Trebuchet MS', sans-serif;
 }
 
-pre,
-code,
-kbd {
-    font: normal 1.0rem 'Raleway', 'Trebuchet MS', sans-serif,
-}
-
 p {
     padding: 1rem 0;
 }
